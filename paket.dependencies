@@ -1,0 +1,19 @@
+source https://nuget.org/api/v2
+source https://vrvis.myget.org/F/aardvark_public/api/v2
+
+nuget Aardvark.Application ~> 1.6.0
+nuget Aardvark.Application.WinForms.GL ~> 1.6.0
+nuget Aardvark.Base ~> 1.6.0
+nuget Aardvark.Base.Essentials ~> 1.6.0
+nuget Aardvark.Base.Incremental ~> 1.6.0
+nuget Aardvark.Base.Rendering ~> 1.6.0
+nuget Aardvark.Rendering.GL ~> 1.6.0
+nuget Aardvark.SceneGraph ~> 1.6.0
+
+
+group Build
+content: none
+source http://nuget.org/api/v2
+nuget FAKE
+nuget SourceLink.Fake
+github vrvis/Aardvark.Fake bin/Aardvark.Fake.dll
