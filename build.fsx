@@ -1,7 +1,7 @@
 #I @"packages/build/FAKE/tools/"
 #r @"FakeLib.dll"
 #load "packages/build/SourceLink.Fake/tools/SourceLink.fsx"
-#r "build/vrvis/Aardvark.Fake/bin/Aardvark.Fake.dll"
+#r @"paket-files\build\vrvis\Aardvark.Fake\bin\Aardvark.Fake.dll"
 
 
 open Fake
@@ -15,4 +15,4 @@ do Environment.CurrentDirectory <- __SOURCE_DIRECTORY__
 //DefaultTargets.install ["src/Aardvark.Rendering.sln"]
 
 // start build
-RunTargetOrDefault "Default"
+//RunTargetOrDefault "Default"
