@@ -1,0 +1,6 @@
+C:\Development\rendering-examples\src\Stub\obj\Debug\Stub.fsproj.Stub.exe.config
+C:\Development\rendering-examples\src\Stub\obj\Debug\Stub.exe
+C:\Development\rendering-examples\src\Stub\obj\Debug\Stub.pdb
+C:\Development\rendering-examples\bin\Debug\Stub.exe.config
+C:\Development\rendering-examples\bin\Debug\Stub.exe
+C:\Development\rendering-examples\bin\Debug\Stub.pdb

@@ -1,3 +1,5 @@
 /packages
-
-/paket-files
+paket-files
+**_config.xml
+bin/debug
+/src/.vs/Stub/v14/*.suo

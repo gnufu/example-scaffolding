@@ -12,7 +12,7 @@ open Aardvark.Fake
 
 do Environment.CurrentDirectory <- __SOURCE_DIRECTORY__
 
-//DefaultTargets.install ["src/Aardvark.Rendering.sln"]
+DefaultTargets.install ["src/Stub.sln"]
 
 // start build
-//RunTargetOrDefault "Default"
+RunTargetOrDefault "Default"

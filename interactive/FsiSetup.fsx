@@ -26,6 +26,9 @@
 #r @"lib\net45\Aardvark.Application.dll"
 #r @"lib\net45\Aardvark.Application.WinForms.dll"
 #r @"lib\net45\Aardvark.Application.WinForms.GL.dll"
+#r @"lib\net45\OpenTK.Compatibility.dll"
+#r @"lib\net45\OpenTK.dll"
+#r @"lib\net45\OpenTK.GLControl.dll"
 
 
 namespace Examples
@@ -47,9 +50,8 @@ module FsiSetup =
 
     let runInteractive () =
            
-        
-        //System.Environment.CurrentDirectory <- System.IO.Path.Combine(__SOURCE_DIRECTORY__, @".")
-        //IntrospectionProperties.CustomEntryAssembly <- System.Reflection.Assembly.LoadFile <| System.IO.Path.Combine(__SOURCE_DIRECTORY__, @"..\..\..\bin\Debug\Examples.exe")
+        System.Environment.CurrentDirectory <- System.IO.Path.Combine(__SOURCE_DIRECTORY__, @"..\bin\debug")
+        IntrospectionProperties.CustomEntryAssembly <- System.Reflection.Assembly.LoadFile (Path.combine [System.Environment.CurrentDirectory; @"Stub.exe"])
 
         Aardvark.Init()
         Ag.initialize()
