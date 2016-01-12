@@ -19,4 +19,4 @@ nuget FAKE
 nuget Paket.Core
 nuget SourceLink.Fake
 nuget Mono.Cecil ~> 0.9.6.1
-github vrvis/Aardvark.Fake:796ff6b53bb6bd22a16b44133158c83d4ae91738
+github vrvis/Aardvark.Fake:6ca12412b464f6c6a0a62a2f3a656b0b4a724646
