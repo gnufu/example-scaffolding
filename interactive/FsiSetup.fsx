@@ -50,7 +50,7 @@ module FsiSetup =
 
     let runInteractive () =
            
-        System.Environment.CurrentDirectory <- System.IO.Path.Combine(__SOURCE_DIRECTORY__, @"..\bin\debug")
+        System.Environment.CurrentDirectory <- System.IO.Path.Combine(__SOURCE_DIRECTORY__, @"..\bin\release")
         IntrospectionProperties.CustomEntryAssembly <- System.Reflection.Assembly.LoadFile (Path.combine [System.Environment.CurrentDirectory; @"Stub.exe"])
 
         Aardvark.Init()
