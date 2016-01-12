@@ -16,5 +16,7 @@ group Build
 content: none
 source http://nuget.org/api/v2
 nuget FAKE
+nuget Paket.Core
 nuget SourceLink.Fake
-github vrvis/Aardvark.Fake bin/Aardvark.Fake.dll
+nuget Mono.Cecil ~> 0.9.6.1
+github vrvis/Aardvark.Fake:796ff6b53bb6bd22a16b44133158c83d4ae91738
