@@ -17,4 +17,14 @@ SET TARGET=Default
 
 IF NOT [%1]==[] (SET TARGET=%~1)
 
-"packages\build\FAKE\tools\Fake.exe" "build.fsx" "target="%TARGET%""
+SET TARGET=Default
+IF NOT [%1]==[] (set TARGET=%1)
+
+>tmp ECHO(%*
+SET /P t=<tmp
+SETLOCAL EnableDelayedExpansion
+IF DEFINED t SET "t=!t:%1 =!"
+SET args=!t!
+del tmp
+
+"packages\build\FAKE\tools\Fake.exe" "build.fsx" "target=%TARGET%" %args%

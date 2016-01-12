@@ -11,6 +11,14 @@
 #I "..\packages\Aardvark.Rendering.NanoVg"
 #I "..\packages\Aardvark.SceneGraph"
 #I "..\packages\FShade"
+#I "..\packages\Rx-Core"
+#I "..\packages\Rx-Linq"
+#I "..\packages\Rx-Interfaces"
+#r @"..\packages\FShade\lib\net45\FShade.Compiler.dll"
+#r @"..\packages\FShade\lib\net45\FShade.dll"
+#r @"lib\net45\System.Reactive.Core.dll"
+#r @"lib\net45\System.Reactive.Linq.dll"
+#r @"lib\net45\System.Reactive.Interfaces.dll"
 #r @"lib\net45\Aardvark.Base.TypeProviders.dll"
 #r @"lib\net45\Aardvark.Base.dll"
 #r @"lib\net45\Aardvark.Base.Essentials.dll"
@@ -29,6 +37,7 @@
 #r @"lib\net45\OpenTK.Compatibility.dll"
 #r @"lib\net45\OpenTK.dll"
 #r @"lib\net45\OpenTK.GLControl.dll"
+#r @"..\packages\FSharp.Quotations.Evaluator\lib\net40\FSharp.Quotations.Evaluator.dll"
 
 
 namespace Examples
@@ -53,8 +62,12 @@ module FsiSetup =
         System.Environment.CurrentDirectory <- System.IO.Path.Combine(__SOURCE_DIRECTORY__, @"..\bin\release")
         IntrospectionProperties.CustomEntryAssembly <- System.Reflection.Assembly.LoadFile (Path.combine [System.Environment.CurrentDirectory; @"Stub.exe"])
 
+        for i in System.AppDomain.CurrentDomain.GetAssemblies() do
+            if i.IsDynamic |> not then
+                Introspection.RegisterAssembly i
+
         Aardvark.Init()
-        Ag.initialize()
+        Ag.reinitialize()
         Aardvark.Base.Ag.unpack <- fun o ->
                 match o with
                     | :? IMod as o -> o.GetValue(null)
