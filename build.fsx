@@ -1,11 +1,12 @@
 #I @"packages\build\"
 
 #r @"FAKE\tools\FakeLib.dll"
-#r @"Paket.Core\lib\net45\Chessie.dll"
+#r @"Chessie\lib\net40\Chessie.dll"
 #r @"Paket.Core\lib\net45\Paket.Core.dll"
 #r @"Mono.Cecil\lib\net45\Mono.Cecil.dll"
 #r "System.IO.Compression.dll"
 #r "System.IO.Compression.FileSystem.dll"
+#r @"Newtonsoft.Json\lib\net45\Newtonsoft.Json.dll"
 
 #load @"paket-files\build\vrvis\Aardvark.Fake\AdditionalSources.fsx"
 #load @"paket-files\build\vrvis\Aardvark.Fake\AssemblyResources.fsx"
