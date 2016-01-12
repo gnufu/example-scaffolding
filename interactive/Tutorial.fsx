@@ -1,8 +1,12 @@
 ﻿(*
 Tutorial.fsx
 
+Important:  This file is part of the aardvark-rendering-scaffolding, a minimal setup for using
+aardvark-rendering within the interactive shell.
+The official samples can be found here: https://github.com/vrvis/aardvark.rendering/tree/master/src/Demo/Examples
+
 This examples demonstrates how to load the aardvark rendering engine into the F# interactive shell. After
-building Aardvark.Rendering.sln either by script or by visual studio, select the contents of this file and press
+building the project either by script or by visual studio, select the contents of this file and press
 ALT+ENTER in order to the run the code immediately.
 On Linux, simply `cd` to this source directory and run mono fsi.exe Tutorial.fsx.
 If all runs fine, you will see a window containing a single quad. After this you can freely modify the construction code
@@ -23,6 +27,7 @@ How to build:
 (5) A new window should now spawn. At the end of each example there are some functions for modifying the content.
     Run those lines in order to see the effects. In Tutorial.fsx you can for example modify values in the positions array
     and rerun lines beginning from quadSg till setSg in order to activate the new content.
+
 *)
 
 
