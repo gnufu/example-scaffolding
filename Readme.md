@@ -10,3 +10,5 @@ build.cmd/build.sh, then run src/Tutorial.fsx in fsi.exe.
 src/Stub.sln contains an example setup for using Aardvark.Rendering. 
 Interestingly, Tutorial.fs can be run from interactive shell AND is compiled by the provided project.
 This is particularly useful when debugging your application.
+
+ [1] https://github.com/vrvis/aardvark.rendering
