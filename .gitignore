@@ -6,3 +6,5 @@ bin/debug
 /bin/Release
 /src/Stub/obj/Release
 .fake
+/.paket/paket.exe
+/src/Stub/obj
